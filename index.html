@@ -6,16 +6,25 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <style>
         #map { height: 500px; width: 100%; }
+        #submitButton {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h2>Click on the Map to Place Your Guess</h2>
+    
+    <!-- Submit button placed above the map -->
+    <button id="submitButton" type="button" onclick="submitGuess()">Submit Guess</button>
+
     <div id="map"></div>
 
     <form id="guessForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeDFrABb91mkC8ljuMMw3HgG9Tl0Iiqmjq6_G5mvvrwVe6bJw/formResponse" method="post">
         <input type="hidden" name="entry.1253399346" id="latitude">
         <input type="hidden" name="entry.1704593700" id="longitude">
-        <button type="button" onclick="submitGuess()">Submit Guess</button>
     </form>
 
     <script>
@@ -50,3 +59,4 @@
     </script>
 </body>
 </html>
+
